@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AnimeCard from '../Components/AnimeCard'
 import axios from 'axios'
 
-const URL = "http://localhost:3001/api/top-airing"
+const URL = "https://betaapi-9jpy.onrender.com/api/top-airing"
 
 class MyComponent extends Component {
     state = {
