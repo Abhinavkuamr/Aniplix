@@ -58,7 +58,7 @@ export default class HomeNew extends Component {
         const res = await axios.get(URL_INFO + `?id=${item.animeId}`);
        //const bannerResponse = await axios.get(`http://localhost:3001/api/banner?id=${res.data.title}`);
        //const banner = bannerResponse.data;
-        //console.log(banner)
+        console.log(res)
 
         //console.log("COVER",res)
         slider_data.push({
