@@ -49,7 +49,7 @@ export default class AnimePlayer extends Component {
 
     async componentDidMount() {
       const lastPathSegment = window.location.pathname.split('/').filter(segment => segment)[1];
-      const URL_ANIME_INFO = `http://localhost:3001/api/info?id=${lastPathSegment}`;
+      const URL_ANIME_INFO = `https://betaapi-9jpy.onrender.com/api/info?id=${lastPathSegment}`;
   
       try {
           const response = await axios.get(URL_ANIME_INFO);
@@ -70,7 +70,7 @@ export default class AnimePlayer extends Component {
 
 
                                 getepisodemedia = async (ANIMEDATA) => {
-                                 const EP = `http://localhost:3001/api/eplink?id=${ANIMEDATA.id}`
+                                 const EP = `https://betaapi-9jpy.onrender.com/api/eplink?id=${ANIMEDATA.id}`
                                  try {
                                   const response = await axios.get(EP);
                                   const ep_link = response.data.sources[3]?.url || response.data.sources[1].url;
