@@ -17,7 +17,7 @@ class MyComponent extends Component {
            
      <div className="card">
         
-        <Link to={animeItem.id ? `/watch/${animeItem.id}` : `${animeItem.animeId}`}>
+        <Link to={animeItem.id ? `/watch/${animeItem.id}` : `/watch/${animeItem.animeId}`}>
           {console.log(animeItem)}
         <img src={animeItem.image || animeItem.animeImg} alt={animeItem.Title || animeItem.animeName} className="card-img-top" />
         <div className="card-body">
