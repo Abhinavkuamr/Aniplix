@@ -1,0 +1,385 @@
+*                   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+   
+:root{
+    --red: #E50914;
+    --black: #000000;
+    --light-color: #181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.container-fluid    {
+    margin: auto;
+    margin-top: 100px;
+   }
+
+#header-wrapper     {
+    position: relative;
+    background-color: var(--red);
+    height: 50px;
+    border-radius: 2rem;
+    margin: 15px 15px;
+   }
+
+.col                {
+    float: left;
+   }
+
+.col-3              {
+    width :25%;
+    padding-left: 15px;
+    padding-right: 15px;
+   }
+
+.col-6              {
+    width: 50%;
+   }
+
+.col-12             {
+    width: 100%;
+    padding-bottom: 15px;
+   }
+
+.panel              {
+    background-color:var(--black);
+    height: 520px;
+   }
+
+.panel-body         {
+    background-color: var(--black);
+    
+   }
+
+.body-1             {
+    height: 360px;
+    overflow: visible;
+   }
+
+.body-2             {
+    height: 145px;
+    margin-top: 20px;
+   }
+
+.panel-label        {
+    background-color: #403f3f;
+    height: 40px;
+   }
+
+/* Tablet devices */
+
+@media screen and (max-width:768px) {
+
+#header-wrapper     {
+    height: 60px;
+   }
+.col-6              {
+    width: 75%;
+   }
+.col-12             {
+    padding-right: 15px;
+   }
+.right              {
+    width: 100%;
+   }
+.col-3              {
+    padding-bottom: 15px;
+   }
+.panel-label        {
+    height: 35px;
+   }
+                   }
+/* End Of Breakpoint*/
+
+
+
+
+
+.panel-left .episode{
+    padding: 10px;
+}
+/*
+.frame{
+    width: 100%;
+    height: 100%;
+
+}
+*/
+
+/* Add this CSS to your stylesheet or component styles */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination button {
+    background-color: var(--light-color);
+    color: var(--red);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    height: 35px;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: white;
+    transform: rotate(360deg);
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination h3{
+    color: white;
+    margin: 12px;
+    font-weight: bolder;
+
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center; /* Center the content horizontally */
+}
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .panel-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+
+  }
+  
+  .panel-label h3{
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+
+
+
+  .panel-right img{
+    width: 100px;
+    height: 148px;
+    margin: 10px;
+  }
+
+  .panel-right h3{
+    color: white;
+    margin: 5px;
+  }
+
+  .panel-right span{
+    color: var(--red);
+  }
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(214, 63, 63, 0.5),
+                  0 0 20px rgba(214, 63, 63, 0.4),
+                  0 0 30px rgba(214, 63, 63, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* Change to black shadow when glowing down */
+                  0 0 0 rgba(0, 0, 0, 1),
+                  0 0 0 rgba(0, 0, 0, 1);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(214, 63, 63, 0.5),
+                  0 0 20px rgba(214, 63, 63, 0.4),
+                  0 0 30px rgba(214, 63, 63, 0.3);
+    }
+  }
+  
+  .panel-right {
+    background-color: var(--black);
+    border: 2px solid #000;
+    border-radius: 10px;
+    animation: glow 3s infinite;
+  }
+
+  .panel-left{
+    background-color: var(--black);
+    border: 2px solid #000;
+    border-radius: 10px;
+    animation: glow 3s infinite;
+    height: fit-content;
+
+
+  }
+  
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card {
+    display: flex; /* Use flexbox to make the image and info appear side by side */
+    align-items: center; /* Center vertically */
+  }
+  
+  .info-image {
+    width: 50%; /* Adjust the width of the image as needed */
+    margin-right: 20px; /* Add spacing between the image and info */
+  }
+  
+  .info {
+    width: 50%; /* Adjust the width of the info container as needed */
+  }
+  
+  .description h3{
+    line-height: 20px;
+  }
+
+  .animedes{
+    max-height: 250px; /* Adjust the value as needed */
+    overflow: auto;
+    background-color: var(--light-color);
+    border-radius: 10px;
+  }
+
+  .giphy-embed:hover {
+    /* Reset any hover styles to their default values */
+    /* For example, you can use the "inherit" value to inherit from the parent styles */
+    /* Or set specific properties to override the hover effect */
+    transform: none; /* Reset any transformations */
+    filter: none; /* Reset any filters */
+    /* Add any other styles you need to remove the hover effect */
+  }
+  
+  .stars-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* You can also use "margin: 0 auto;" for centering horizontally */
+    /* If you want to center the stars both horizontally and vertically, you can omit "align-items" */
+  }
+  .stars-container span {
+    margin: 0 20px; /* Adjust the value as needed for the desired spacing */
+  }
+  
+
+
+  @keyframes glowgold {
+    0% {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* No shadow at the top */
+                  0 0 20px rgba(255, 215, 0, 0.4), /* Gold color shadow in the middle */
+                  0 0 30px rgba(255, 215, 0, 0.3); /* Gold color shadow at the bottom */
+    }
+    50% {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* No shadow at the top */
+                  0 0 0 rgba(0, 0, 0, 1),
+                  0 0 0 rgba(0, 0, 0, 1);
+    }
+    100% {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* No shadow at the top */
+                  0 0 20px rgba(255, 215, 0, 0.4), /* Gold color shadow in the middle */
+                  0 0 30px rgba(255, 215, 0, 0.3); /* Gold color shadow at the bottom */
+    }
+    
+    
+  }
+  
+
+
+  .body-2{
+    border-radius: 0 0 20px 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    animation: glowgold 3s infinite;
+  }
+
+.kallukaliya{
+  display: flex ;
+  justify-content: center;
+  align-content:center
+}
+  /* Mobile Devices */
+
+  
+  .iframewaladiv{
+    width: 740px;
+  }
+
+
+@media screen and (max-width:668px) {
+
+  .kallukaliya{
+    flex-direction: column;
+  }
+
+  #header-wrapper     {
+      height: 50px;
+     }
+  .col                {
+      width: 100%;
+     }
+  .col-12             {
+      padding: 15px;
+      order: 3;
+     }
+  .col-3              {
+      padding-bottom: 15px;
+      order: 1;
+      
+     }
+     .col-3 .left{
+      order: 2;
+     }
+  .panel,.panel-body  {
+      height: fit-content;
+     }
+  .panel-label        {
+      height: 30px;
+     }
+     .panel-left{
+      height: fit-content;
+      order: 2;
+     }
+     .iframewaladiv{
+      width: 340px;
+      height: fit-content;
+      margin-bottom: 10px;
+    }
+
+  
+
+
+  
+
+     
+     
+   }
+  /* End Of Breakpoint*/
+
+  .plyr__progress
+  {
+    color: #E50914;
+  }
+

@@ -1,0 +1,28 @@
+/* stylesheets/footer.css */
+
+.copyright {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* Set the width to 100% to cover the full width */
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo i {
+    font-size: 28px;
+    margin-right: 10px;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  

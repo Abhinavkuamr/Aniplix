@@ -1,0 +1,237 @@
+
+:root{
+    --red: #E50914;
+    --black: #000000;
+    --light-color: #181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nurito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    box-shadow: var(--box-shadow);
+}
+
+
+header .logo{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i{
+    color: var(--red);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: white
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: white;
+    background: var(--red);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+    border-radius: 50%;
+    background: var(--red);
+
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color: var(--red);
+    background: white;
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+
+
+.searchTerm {
+    border: 3px solid var(--red);
+    margin-left:5px ;
+    border-radius: 5px 5px 5px 5px;
+    height: 30px;
+    padding: 5px;
+    color: #9DBFAF;
+    display: none;
+  }
+
+  .searchTerm.active{
+    position: absolute;
+    top: 100%; /* Position it below the navbar */
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #FFF8DC;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-top: 0.3rem;
+    z-index: 1; /* Ensure it appears above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    max-height: 200px;
+    transition: max-height 0.3s ease; /* Add a smooth transition */
+}
+
+  .searchTerm:focus{
+    color: var(--red);
+  }
+
+  .searchButton {
+    background: var(--black);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+ 
+
+
+
+/* navbar.css */
+.searchButton.hide-search {
+    display: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media query*/
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+
+@media(max-width: 768px)
+{
+
+    .searchTerm.active{
+        display: inline;
+    }
+    
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: .1rem solid rbga(0,0,0,.2);
+        border-bottom: .1rem solid rbga(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);;
+
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--red);
+    }
+}
+
+@media(max-width: 468px){
+    html{
+        font-size: 50%;
+    }
+}
+

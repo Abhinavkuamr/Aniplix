@@ -1,0 +1,274 @@
+
+:root{
+  --red: #E50914;
+  --black: #000000;
+  --light-color: #181818;
+  --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.card-img-top {
+  max-height: 240px; 
+  object-fit: cover;
+}
+
+.swiper-scrollbar {
+  display: none;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #007bff; 
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.player {
+  flex: 2;
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  width: 100vh;
+  height: 100vh;
+}
+
+.info-box {
+  flex: 1;
+  background-color: #444;
+  color: white;
+  padding: 20px;
+}
+
+.anime-info {
+  background-color: #7f7e7e;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.anime-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.anime-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+
+.anime-description {
+  height: 200px; 
+  overflow: auto; 
+
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #f1f1f1; 
+}
+
+.anime-description::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.anime-description::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.anime-description::-webkit-scrollbar-track-piece:hover {
+  background: #f1f1f1;
+}
+
+.episode-button {
+  display: block; 
+  width: 100%; 
+  padding: 10px; 
+  text-align: center; 
+  background-color: var(--light-color); 
+  color: var(--red); 
+  border: none; 
+  cursor: pointer; 
+  border-radius: 10px;
+  margin-bottom: 10px; 
+  text-overflow: ellipsis; 
+  overflow: hidden;
+  white-space: nowrap; 
+}
+
+.clicked-button {
+  background-color: white;
+}
+
+.episode-button:hover {
+  background-color: white; 
+}
+
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url('https://images2.alphacoders.com/133/1330917.jpeg');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.featured-anime {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.featured-anime h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--red);
+}
+
+.anime-list {
+  display: flex;
+  justify-content: center;
+}
+
+.anime-item {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.anime-item img {
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+
+.frame {
+}
+
+.card-body{
+  height: 100px;
+  overflow: hidden;
+}
+
+.card-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0
+}
+
+
+.card {
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+
+}
+
+
+
+.slider-controls {
+  margin-top: 20px;
+}
+
+

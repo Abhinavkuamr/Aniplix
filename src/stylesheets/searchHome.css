@@ -1,0 +1,22 @@
+/* styles.css */
+
+@keyframes glowUpDown {
+    0% {
+      transform: translateY(0);
+      box-shadow: 0 0 10px 0 rgba(229, 9, 20, 0.7);
+    }
+    50% {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px 0 rgba(229, 9, 20, 0.7);
+    }
+    100% {
+      transform: translateY(0);
+      box-shadow: 0 0 10px 0 rgba(229, 9, 20, 0.7);
+    }
+  }
+  
+  .anime-border-box {
+    border: 2px solid red;
+    animation: glowUpDown 2s infinite;
+  }
+  
