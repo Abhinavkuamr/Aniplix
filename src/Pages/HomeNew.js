@@ -143,7 +143,7 @@ export default class HomeNew extends Component {
 
       
     >
-{anime.map((element, index) => (
+{anime?.length > 1 && anime?.map((element, index) => (
   <SwiperSlide key={index}>
     <div className='slide'>
       <div className='box' style={{background: `url(${element.animeCover}) no-repeat` , backgroundSize: "contain" }}>
