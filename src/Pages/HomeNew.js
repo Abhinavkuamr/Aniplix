@@ -15,7 +15,7 @@ import AnimeCard from '../Components/AnimeCard'
 import Footer from '../Components/Footer'
 
 
-const URL_POPULAR = "https://betaapi-9jpy.onrender.com/api/top-airing"
+const URL_POPULAR = "https://betaapi-9jpy.onrender.com/api/popular"
 const URL_INFO = "https://betaapi-9jpy.onrender.com/api/info"
 
 const URL_RECENT = "https://betaapi-9jpy.onrender.com/api/recent"
