@@ -19,9 +19,9 @@ class MyComponent extends Component {
         
         <Link to={animeItem.id ? `/watch/${animeItem.id}` : `${animeItem.animeId}`}>
           {console.log(animeItem)}
-        <img src={animeItem.image || animeItem.animeImage} alt={animeItem.title || animeItem.animeName} className="card-img-top" />
+        <img src={animeItem.image || animeItem.animeImg} alt={animeItem.Title || animeItem.animeName} className="card-img-top" />
         <div className="card-body">
-          <p className="card-title">{animeItem.title || animeItem.animeName}</p>
+          <p className="card-title">{animeItem.title || animeItem.animeTitle}</p>
           {animeItem.genres && (
                 <p className="card-text">Genres: {animeItem.genres.join(', ')}</p>
               )}
