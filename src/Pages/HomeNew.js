@@ -87,7 +87,8 @@ export default class HomeNew extends Component {
   render() {
 
     const {anime,showFullDescription,recent} = this.state
-    //console.log("recent",anime)
+    console.log("recent",anime)
+    console.log("anime",anime)
 
     if (anime.length === 0 || recent.length === 0) {
       
