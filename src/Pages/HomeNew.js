@@ -76,7 +76,7 @@ export default class HomeNew extends Component {
 
       const recentResponse = await axios.get(URL_RECENT);
       data = recentResponse.data.results;
-      console.log("RECENT", data)
+      console.log("slider_data", slider_data)
 
       this.setState({ anime: slider_data, recent: data, isLoading:false });
     } catch (error) {
