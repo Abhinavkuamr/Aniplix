@@ -23,6 +23,7 @@ const URL_RECENT = "https://betaapi-9jpy.onrender.com/api/recent"
 
 
 */
+
 import React, { Component } from 'react'
 import "../stylesheets/home.css"
 import { Swiper, SwiperSlide} from 'swiper/react';
@@ -44,7 +45,6 @@ const URL_POPULAR = "https://betaapi-9jpy.onrender.com/api/popular"
 const URL_INFO = "https://betaapi-9jpy.onrender.com/api/info"
 
 const URL_RECENT = "https://betaapi-9jpy.onrender.com/api/recent"
-
 
 
 
@@ -143,10 +143,10 @@ export default class HomeNew extends Component {
 
       
     >
-{anime?.length > 1 && anime?.map((element, index) => (
+{anime.map((element, index) => (
   <SwiperSlide key={index}>
     <div className='slide'>
-      <div className='box' style={{background: url(${element.animeCover}) no-repeat , backgroundSize: "contain" }}>
+      <div className='box' style={{background: `url(${element.animeCover}) no-repeat` , backgroundSize: "contain" }}>
         <div className='content'>
         <div className="black-blur-box">
           <u><h2 style={{fontStyle: "italic", color: "red"}}>Spotlight #{index + 1}</h2></u>
@@ -268,3 +268,4 @@ export default class HomeNew extends Component {
     )
   }
 }
+
