@@ -90,10 +90,11 @@ export default class HomeNew extends Component {
     console.log("recent",anime)
     console.log("anime",anime)
 
-    if (anime.length === 0 || recent.length === 0) {
+   /* if (anime.length === 0 || recent.length === 0) {
       
       return <LoadingScreen />; // You can also show a loading indicator
     }
+    */
 
 
     
