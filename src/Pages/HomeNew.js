@@ -33,7 +33,8 @@ export default class HomeNew extends Component {
   state = {
     anime: [], // Initialize with an empty array
     showFullDescription : false,
-    recent: []
+    recent: [],
+    isLoading: true
   };
 
   toggleDescription = () => {
@@ -75,9 +76,10 @@ export default class HomeNew extends Component {
       const recentResponse = await axios.get(URL_RECENT);
       data = recentResponse.data.results;
 
-      this.setState({ anime: slider_data, recent: data });
+      this.setState({ anime: slider_data, recent: data, isLoading:false });
     } catch (error) {
       console.error("abhinav", error);
+      
     }
   }
 
@@ -86,11 +88,11 @@ export default class HomeNew extends Component {
   }
   render() {
 
-    const {anime,showFullDescription,recent} = this.state
+    const {anime,showFullDescription,recent, isLoading} = this.state
     console.log("recent",anime)
     console.log("anime",anime)
 
-    if (anime.length === 0 || recent.length === 0) {
+    if (isLoading) {
       
       return <LoadingScreen />; // You can also show a loading indicator
     console.log("recent",anime)
