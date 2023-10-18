@@ -119,7 +119,7 @@ const HomeNew = () => {
                               </span>
                             )}
                           </p>
-                          <Link to={element.anime_id} className="btn">
+                          <Link to={`../watch/${element.anime_id}`} className="btn">
                             Watch Now
                           </Link>
                         </div>
