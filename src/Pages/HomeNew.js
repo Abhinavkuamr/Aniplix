@@ -38,44 +38,40 @@ const HomeNew = () => {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    return new Promise(async (resolve, reject) => {
       try {
         const popularResponse = await fetch(URL_POPULAR);
         const popularData = await popularResponse.json();
 
         const response = await fetch("https://ottoscraper.vercel.app/api/pop");
         const animeData = await response.json();
-        let slider_data = [];
         let data = [];
 
         const recentResponse = await axios.get(URL_RECENT);
         data = recentResponse.data;
 
-        slider_data = animeData[0].trending.map((element, index) => {
-          return {
-            animeName: element.title,
-            animeImage: `https://image.tmdb.org/t/p/original${element.backdrop_path}`,
-            animeDes: element.synopsis,
-            animeId: element.anime_id,
-          };
-        });
-
-        setAnime(slider_data);
+        setAnime(animeData[0]);
         setRecent(data);
         setPopular(popularData);
         setIsLoading(false);
+
+        resolve({ anime: animeData[0], recent: data, popular: popularData });
       } catch (error) {
         console.error("abhinav", error);
+        reject(error);
       }
-    };
-
-    fetchData();
-  }, []);
+    });
+  };
 
   if (isLoading) {
     return <LoadingScreen />;
   }
 
+  console.log(anime);
   return (
     <>
       <section className="home" id="home">
@@ -114,7 +110,7 @@ const HomeNew = () => {
                               : element.synopsis.slice(0, 200)}
                             {element.synopsis.length > 200 && (
                               <span
-                                onClick={this.toggleDescription}
+                                onClick={toggleDescription}
                                 className="read-more"
                               >
                                 {showFullDescription
