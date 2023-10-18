@@ -63,6 +63,7 @@ export default class HomeNew extends Component {
         //console.log(res)
 
         //console.log("COVER",res)
+        console.log("Fetched anime data:", res.data);
         slider_data.push({
           animeName: res.data.title,
           animeImage: res.data.image,
