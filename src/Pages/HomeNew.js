@@ -1,3 +1,28 @@
+/*import React, { Component } from 'react'
+import "../stylesheets/home.css"
+import { Swiper, SwiperSlide} from 'swiper/react';
+import '../../node_modules/swiper/swiper-bundle.min.css';
+import "../../node_modules/swiper/swiper.min.css"
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay  } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import axios from 'axios';
+import LoadingScreen from '../Components/LoadingScreen';
+import { Link } from 'react-router-dom';
+import AnimeCard from '../Components/AnimeCard'
+import Footer from '../Components/Footer'
+
+
+const URL_POPULAR = "https://betaapi-9jpy.onrender.com/api/popular"
+const URL_INFO = "https://betaapi-9jpy.onrender.com/api/info"
+
+const URL_RECENT = "https://betaapi-9jpy.onrender.com/api/recent"
+
+
+
+*/
 import React, { Component } from 'react'
 import "../stylesheets/home.css"
 import { Swiper, SwiperSlide} from 'swiper/react';
@@ -48,7 +73,6 @@ export default class HomeNew extends Component {
     try {
       const response = await axios.get(URL_POPULAR);
       const animeData = response.data.results;
-      console.log("POPULAR",animeData);
       let slider_data = [];
       let data = [];
 
@@ -60,10 +84,9 @@ export default class HomeNew extends Component {
         const res = await axios.get(URL_INFO + `?id=${item.animeId}`);
        //const bannerResponse = await axios.get(`http://localhost:3001/api/banner?id=${res.data.title}`);
        //const banner = bannerResponse.data;
-        //console.log(res)
+        //console.log(banner)
 
         //console.log("COVER",res)
-        console.log("Fetched anime data:", res.data);
         slider_data.push({
           animeName: res.data.title,
           animeImage: res.data.image,
@@ -77,12 +100,10 @@ export default class HomeNew extends Component {
 
       const recentResponse = await axios.get(URL_RECENT);
       data = recentResponse.data.results;
-      console.log("slider_data", slider_data)
 
-      this.setState({ anime: slider_data, recent: data, isLoading:false });
+      this.setState({ anime: slider_data, recent: data , isLoading: false});
     } catch (error) {
       console.error("abhinav", error);
-      
     }
   }
 
@@ -91,17 +112,13 @@ export default class HomeNew extends Component {
   }
   render() {
 
-    const {anime,showFullDescription,recent, isLoading} = this.state
-    console.log("recent",anime)
-    console.log("anime",anime)
+    const {anime,showFullDescription,recent,isLoading} = this.state
+    //console.log("recent",anime)
 
     if (isLoading) {
       
       return <LoadingScreen />; // You can also show a loading indicator
-    console.log("recent",anime)
-    console.log("anime",anime)
     }
-    
 
 
     
