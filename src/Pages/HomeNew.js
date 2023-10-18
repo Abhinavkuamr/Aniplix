@@ -15,10 +15,10 @@ import AnimeCard from '../Components/AnimeCard'
 import Footer from '../Components/Footer'
 
 
-const URL_POPULAR = "http://localhost:3001/api/popular"
-const URL_INFO = "http://localhost:3001/api/info"
+const URL_POPULAR = "https://betaapi-9jpy.onrender.com/api/popular"
+const URL_INFO = "https://betaapi-9jpy.onrender.com/api/info"
 
-const URL_RECENT = "http://localhost:3001/api/recent"
+const URL_RECENT = "https://betaapi-9jpy.onrender.com/api/recent"
 
 
 
