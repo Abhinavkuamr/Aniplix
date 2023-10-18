@@ -48,6 +48,7 @@ export default class HomeNew extends Component {
     try {
       const response = await axios.get(URL_POPULAR);
       const animeData = response.data.results;
+      console.log("POPULAR",animeData);
       let slider_data = [];
       let data = [];
 
@@ -59,7 +60,7 @@ export default class HomeNew extends Component {
         const res = await axios.get(URL_INFO + `?id=${item.animeId}`);
        //const bannerResponse = await axios.get(`http://localhost:3001/api/banner?id=${res.data.title}`);
        //const banner = bannerResponse.data;
-        console.log(res)
+        //console.log(res)
 
         //console.log("COVER",res)
         slider_data.push({
@@ -75,6 +76,7 @@ export default class HomeNew extends Component {
 
       const recentResponse = await axios.get(URL_RECENT);
       data = recentResponse.data.results;
+      console.log("RECENT", data)
 
       this.setState({ anime: slider_data, recent: data, isLoading:false });
     } catch (error) {
