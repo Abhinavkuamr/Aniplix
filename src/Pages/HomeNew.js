@@ -202,6 +202,7 @@ const HomeNew = () => {
             <h2>Most Popular Anime</h2>
             <div class="anime-list">
               <div class="card-container">
+                  {console.log("POPULAR ANIME".popular)}
                 {popular.map((animeItem, index) => (
                   <AnimeCard key={index} animeItem={animeItem} />
                 ))}
