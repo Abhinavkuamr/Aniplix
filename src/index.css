@@ -280,7 +280,7 @@ header {
   .card-container {
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap onto the next row */
-    justify-content: space-between;
+    
     gap: 20px; /* Adjust the gap as needed */
     flex-direction: row;
 
