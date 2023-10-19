@@ -9,7 +9,7 @@ class MyComponent extends Component {
     
 
     const animeItem = this.props.animeItem
-    //console.log(animeItem)
+    console.log(animeItem)
 
     
     return (  <>
