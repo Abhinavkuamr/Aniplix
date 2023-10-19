@@ -9,7 +9,7 @@ class MyComponent extends Component {
     
 
     const animeItem = this.props.animeItem
-    console.log("ITEMS",animeItem)
+    //console.log(animeItem)
 
     
     return (  <>
@@ -17,11 +17,11 @@ class MyComponent extends Component {
            
      <div className="card">
         
-        <Link to={animeItem.id ? `../watch/${animeItem.id}` : `../watch/${animeItem.animeId}`}>
+        <Link to={animeItem.id ? `/watch/${animeItem.id}` : `${animeItem.animeId}`}>
           {console.log(animeItem)}
-        <img src={animeItem.image || animeItem.animeImg} alt={animeItem.Title || animeItem.animeName} className="card-img-top" />
+        <img src={animeItem.image || animeItem.animeImage} alt={animeItem.title || animeItem.animeName} className="card-img-top" />
         <div className="card-body">
-          <p className="card-title">{animeItem.title || animeItem.animeTitle}</p>
+          <p className="card-title">{animeItem.title || animeItem.animeName}</p>
           {animeItem.genres && (
                 <p className="card-text">Genres: {animeItem.genres.join(', ')}</p>
               )}
