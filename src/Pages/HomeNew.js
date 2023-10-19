@@ -172,7 +172,7 @@ export default class HomeNew extends Component {
 <div class="slide" key={index}  title={`Tooltip for ${element.title}`}>
   <div class="box" style={{ background: `url(${element.image}) no-repeat`, backgroundSize: "contain", backgroundPosition: "center center" }}>
     <div class="play-button-container">
-          <Link to={`/watch/${element.id}`} class="play-btn">
+          <Link to={`/watch/${element.id === "jujutsu-kaisen-2nd-season"?"jujutsu-kaisen-tv-2nd-season":element.id}`} class="play-btn">
               <i class="fa-solid fa-play"></i>
     </Link>
     </div>
