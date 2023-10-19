@@ -44,7 +44,13 @@ body{
     background-position: center !important;
     justify-content:flex-end;
     padding:2rem 9%;
+
+
+  
 }
+
+
+
 
 .btn{
     margin-top:1rem;
@@ -458,12 +464,12 @@ body{
 
 @media (max-width: 768px) {
 
-  .swiper-pagination-bullet {
+  .home .swiper-pagination-bullet {
     background-color: red !important;
     border: 2px solid black !important; /* Add the border property */
   }
   
-  .swiper-pagination {
+  .home .swiper-pagination {
     display: flex !important; /* Use flexbox */
     justify-content: center !important; /* Center horizontally */
     align-items: center !important; /* Center vertically */
@@ -474,14 +480,14 @@ body{
     border-radius: 5px !important; /* Add border-radius for the black background */
   }
   
-  .swiper-pagination-bullet {
+  .home .swiper-pagination-bullet {
     width: 10px !important;
     border-radius: 50% !important;
     margin: 0 5px !important; /* Add margin between bullets as needed */
   }
   
-  .swiper-button-next,
-  .swiper-button-prev {
+  .home .swiper-button-next,
+  .home .swiper-button-prev {
     display: none !important;
   }
   
