@@ -21,10 +21,10 @@ import AnimeCard from "../Components/AnimeCard";
 import Footer from "../Components/Footer";
 
 const URL_POPULAR =
-  "https://gogoanime-api-production-bb8b.up.railway.app/popular";
-const URL_INFO = "https://betaapi-9jpy.onrender.com/api/info";
+  "https://web-production-a8e9.up.railway.app/popular";
+const URL_INFO = "https://betaversion-hqvuwe9lt-abhinavkuamrs-projects.vercel.app/api/info";
 const URL_RECENT =
-  "https://gogoanime-api-production-bb8b.up.railway.app/recent-release";
+  "https://web-production-a8e9.up.railway.app/recent-release";
 
 const HomeNew = () => {
   const [anime, setAnime] = useState([]);
