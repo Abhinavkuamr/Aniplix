@@ -458,6 +458,10 @@ body{
 
 @media (max-width: 768px) {
 
+    .anime .box{
+        width: 148px
+    }
+
   .swiper-pagination-bullet {
     background-color: red !important;
     border: 2px solid black !important; /* Add the border property */
