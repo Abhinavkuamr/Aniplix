@@ -480,8 +480,8 @@ body{
     margin: 0 5px !important; /* Add margin between bullets as needed */
   }
   
-  .swiper-button-next,
-  .swiper-button-prev {
+  .home .swiper-button-next,
+  .home .swiper-button-prev {
     display: none !important;
   }
   
