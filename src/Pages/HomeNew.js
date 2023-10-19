@@ -157,7 +157,7 @@ export default class HomeNew extends Component {
           slidesPerView: 5, // Number of slides to display for screens wider than 1024px
         },
         320: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 5
         }
 
