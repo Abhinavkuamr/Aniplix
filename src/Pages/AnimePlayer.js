@@ -49,7 +49,7 @@ export default class AnimePlayer extends Component {
 
     async componentDidMount() {
       const lastPathSegment = window.location.pathname.split('/').filter(segment => segment)[1];
-      const URL_ANIME_INFO = `https://betaapi-9jpy.onrender.com/api/info?id=${lastPathSegment}`;
+      const URL_ANIME_INFO = `https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/id=${lastPathSegment}`;
   
       try {
           const response = await axios.get(URL_ANIME_INFO);
