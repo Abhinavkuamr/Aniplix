@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 80px;
   max-width: 1200px; 
   margin: 0 auto; 
 }
@@ -259,11 +259,26 @@ header {
 
 
 .card {
-  margin: 10px;
-  width: 200px;
+  margin: 5px;
+  width: 150px;
   height: 300px;
 
 }
+
+@media (max-width: 768px) {
+  .featured-anime {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next row */
+    justify-content: space-between;
+    gap: 20px; /* Adjust the gap as needed */
+    flex-direction: row;
+
+  }
 
 
 
