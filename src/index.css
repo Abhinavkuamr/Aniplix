@@ -285,6 +285,10 @@ header {
     flex-direction: row;
 
   }
+  .card-img-top {
+
+    max-width: 160px;
+  }
 }
 
 
