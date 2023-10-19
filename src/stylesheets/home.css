@@ -1,10 +1,4 @@
-*                   {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   }
 
-   
 :root{
     --red: #E50914;
     --black: #000000;
@@ -12,392 +6,484 @@
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
-.container-fluid    {
-    margin: auto;
-    margin-top: 100px;
-   }
-
-#header-wrapper     {
-    position: relative;
-    background-color: var(--red);
-    height: 50px;
-    border-radius: 2rem;
-    margin: 15px 15px;
-   }
-
-.col                {
-    float: left;
-   }
-
-.col-3              {
-    width :25%;
-    padding-left: 15px;
-    padding-right: 15px;
-   }
-
-.col-6              {
-    width: 50%;
-   }
-
-.col-12             {
-    width: 100%;
-    padding-bottom: 15px;
-   }
-
-.panel              {
-    background-color:var(--black);
-    height: 520px;
-   }
-
-.panel-body         {
-    background-color: var(--black);
-    
-   }
-
-.body-1             {
-    height: 360px;
-    overflow: visible;
-   }
-
-.body-2             {
-    height: 145px;
-    margin-top: 20px;
-   }
-
-.panel-label        {
-    background-color: #403f3f;
-    height: 40px;
-   }
-
-/* Tablet devices */
-
-@media screen and (max-width:768px) {
-
-#header-wrapper     {
-    height: 60px;
-   }
-.col-6              {
-    width: 75%;
-   }
-.col-12             {
-    padding-right: 15px;
-   }
-.right              {
-    width: 100%;
-   }
-.col-3              {
-    padding-bottom: 15px;
-   }
-.panel-label        {
-    height: 35px;
-   }
-                   }
-/* End Of Breakpoint*/
-
-
-
-
-
-.panel-left .episode{
-    padding: 10px;
-}
-/*
-.frame{
-    width: 100%;
-    height: 100%;
-
-}
-*/
-
-/* Add this CSS to your stylesheet or component styles */
-.pagination {
-    display: flex;
-    justify-content: space-between;
-}
-
-.pagination button {
-    background-color: var(--light-color);
-    color: var(--red);
-    padding: 10px 20px;
+*{
+    font-family: 'Nurito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
     border: none;
-    border-radius: 100px;
-    height: 35px;
-    margin-top: 3px;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+
+body{
+    background-color:var(--light-color);
+}
+
+.home{
+
+    padding: 0;
+}
+
+.home .box{
+    min-height: 80vh;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display: flex;
+    align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content:flex-end;
+    padding:2rem 9%;
+}
+
+.btn{
+    margin-top:1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--red);
+    border-radius: .5rem;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    padding: .8rem 3rem;
 }
 
-.pagination button:hover {
-    background-color: white;
-    transform: rotate(360deg);
+
+
+.home .box{
+    justify-content: flex-start;
 }
 
-.pagination button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.home .box.second{
+    justify-content: flex-start;
 }
 
-.pagination h3{
-    color: white;
-    margin: 12px;
-    font-weight: bolder;
-
+.home .box .content{
+    width:50rem;
 }
 
-.center-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-align: center; /* Center the content horizontally */
+
+
+.home .box .content h3{
+    font-size: 4rem;
+    color: #fff;
+    padding-top: .5rem;
+    text-transform: uppercase;
 }
-.responsive-iframe-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
+
+
+.home .box .content p{
+    line-height: 2;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+
+
+.btn:hover{
+    background: var(--black);
+    color: var(--red);
+    letter-spacing: .1rem;
+}
+
+
+
+  .section{
+    padding: 2rem 9%;
+  }
+
+  .section:nth-child(even){
+    background: var(--light-color);
+  }
+
+  .heading{
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+     
+  }
+
+  .read-more {
+    color: var(--red);
+    cursor: pointer; /* Make it look clickable */
+    text-decoration: underline; /* Underline the text */
+    margin-left: 6px;
+  }
+
+ 
+  .black-blur-box {
+    background: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity for blur effect */
+    padding: 20px; /* Add padding to the box for content spacing */
+    color: white; /* Text color inside the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    width: 150%;
   }
   
-  .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .black-blur-box h3 {
+    font-size: 20px;
+    margin: 0; /* Remove default margin to keep text inside the box */
+  }
+  
+  .black-blur-box p {
+    margin: 10px 0; /* Add margin to the description text for spacing */
+  }
+  
+  @media (max-width: 768px) {
+
+    .description{
+      display: none;
+    }
+  
+    .home .box .content h3{
+      font-size: 1rem;
+      color: #fff;
+      padding-top: .5rem;
+      text-transform: uppercase;
   }
 
-  .panel-label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+
+  .black-blur-box {
+    background: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity for blur effect */
+    padding: 10px; /* Add padding to the box for content spacing */
+    color: white; /* Text color inside the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    width: 100%;
+  }
+  
+  .black-blur-box h3 {
+    font-size: 10px;
+    margin: 0; /* Remove default margin to keep text inside the box */
+  }
+  
+  .black-blur-box p {
+    margin: 5px 0; /* Add margin to the description text for spacing */
+  }
+  
+  
+  
     
+    
+  }
 
+  
+  /* Style the "Read More" link */
+  .read-more {
+    color: blue; /* Change the text color to blue */
+    cursor: pointer; /* Show a pointer cursor on hover */
+  }
+
+  .anime{
+    padding: 5rem;
+  }
+
+  .anime .content
+  {
+    width: 300px;
+    height: 100px;
+
+  }
+  .anime .box{
+    width: 300px;
+    height: 260px;
   }
   
-  .panel-label h3{
+  .anime .content h3{
+    font-size: 1rem;
     color: white;
-    margin-left: 5px;
-    margin-right: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
   }
 
-
-
-
-  .panel-right img{
-    width: 100px;
-    height: 148px;
-    margin: 10px;
-  }
-
-  .panel-right h3{
+  .anime .content p{
+    font-size: 1.2rem;
     color: white;
-    margin: 5px;
+    text-decoration: none;
+  }
+  
+
+  .play-button-container {
+    position: absolute;
+    top: -8px;
+    left: 25px;
+    z-index: 2;
+  }
+  
+  /* Style for the play button */
+  .play-button-container i {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%; /* Makes it a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .play-btn{
+
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    background: var(--red);
+    border-radius: 50%; /* Make it a full circle */
+    cursor: pointer;
+    width: 4rem; /* Set the width and height to the same value */
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 
-  .panel-right span{
+
+  .play-btn i {
+    color: #fff;
+    transition: color 0.3s; /* Add a transition effect for the color */
+}
+
+.play-btn:hover {
+    background: #fff; /* Change the background to white on hover */
+}
+
+.play-btn:hover i {
+    color: var(--red); /* Change the color to red on hover */
+}
+
+.anime .slide{
+  width: 200px;
+}
+
+
+.anime .slide {
+  position: relative;
+}
+
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  top: 70px;
+  z-index: 10;
+}
+
+.search-input {
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 10px;
+  flex-grow: 1;
+  max-width: 100%; /* Ensure the input doesn't exceed its container's width */
+  /* You can set a specific maximum width as needed, e.g., max-width: 300px; */
+}
+
+/* Media Query for screens with a minimum width of 768px (adjust as needed) */
+@media (min-width: 768px) {
+  .search-form {
+    justify-content: center; /* Center the search form on larger screens */
+  }
+  .search-input {
+    max-width: 300px; /* Set a maximum width for the input on larger screens */
+  }
+}
+
+
+.search-button {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.search-button:hover {
+  background: var(--light-color);
+}
+
+.fullsite{
+
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+.fullsite:hover{
+
+  background: var(--light-color);
+
+
+}
+
+.fullsite-flap i{
+  font-size: 30px;
+}
+.somthing{
+  font-size: 30px;
+}
+
+
+.fullsite h3{
+  font-size: 14px;
+}
+
+@media (max-width:768px ){
+
+  .kela .gif{
+
+    display: none;
+
+  }
+}
+  
+
+
+/* Add these styles to your CSS */
+
+.full-site-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--red);
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 10;
+  left: 10%;
+  right: 10%;
+  z-index: -10; /* Set a lower z-index to place it behind the section */
+  
+}
+
+.full-site-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+  
+}
+
+
+.anime.kela {
+  /* Set the background image */
+  background-image: url('https://wallpapers.com/images/hd/4098x2304-anime-universe-image-anime-characters-hd-wallpaper-and-background-6q0wwu9gf52hvl9h.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Create a pseudo-element for the black blur overlay */
+.anime.kela::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Black with 50% opacity */
+  z-index: 2; /* Set a higher z-index to overlay the background image */
+  filter: blur(10px); /* Add a blur effect (adjust the value as needed) */
+}
+
+.fullsite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--red);
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+  bottom: 10;
+  left: 10%;
+  right: 10%;
+  z-index: 3; /* Set a lower z-index to place it behind the section */
+}
+
+.fullsite:hover {
+  background: white;
+  .somthing{
     color: var(--red);
   }
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 10px rgba(214, 63, 63, 0.5),
-                  0 0 20px rgba(214, 63, 63, 0.4),
-                  0 0 30px rgba(214, 63, 63, 0.3);
-    }
-    50% {
-      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* Change to black shadow when glowing down */
-                  0 0 0 rgba(0, 0, 0, 1),
-                  0 0 0 rgba(0, 0, 0, 1);
-    }
-    100% {
-      box-shadow: 0 0 10px rgba(214, 63, 63, 0.5),
-                  0 0 20px rgba(214, 63, 63, 0.4),
-                  0 0 30px rgba(214, 63, 63, 0.3);
-    }
-  }
-  
-  .panel-right {
-    background-color: var(--black);
-    border: 2px solid #000;
-    border-radius: 10px;
-    animation: glow 3s infinite;
-  }
-
-  .panel-left{
-    background-color: var(--black);
-    border: 2px solid #000;
-    border-radius: 10px;
-    animation: glow 3s infinite;
-    height: fit-content;
-
-
-  }
-  
-  .info{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info-card {
-    display: flex; /* Use flexbox to make the image and info appear side by side */
-    align-items: center; /* Center vertically */
-  }
-  
-  .info-image {
-    width: 50%; /* Adjust the width of the image as needed */
-    margin-right: 20px; /* Add spacing between the image and info */
-  }
-  
-  .info {
-    width: 50%; /* Adjust the width of the info container as needed */
-  }
-  
-  .description h3{
-    line-height: 20px;
-  }
-
-  .animedes{
-    max-height: 250px; /* Adjust the value as needed */
-    overflow: auto;
-    background-color: var(--light-color);
-    border-radius: 10px;
-  }
-
-  .giphy-embed:hover {
-    /* Reset any hover styles to their default values */
-    /* For example, you can use the "inherit" value to inherit from the parent styles */
-    /* Or set specific properties to override the hover effect */
-    transform: none; /* Reset any transformations */
-    filter: none; /* Reset any filters */
-    /* Add any other styles you need to remove the hover effect */
-  }
-  
-  .stars-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    /* You can also use "margin: 0 auto;" for centering horizontally */
-    /* If you want to center the stars both horizontally and vertically, you can omit "align-items" */
-  }
-  .stars-container span {
-    margin: 0 20px; /* Adjust the value as needed for the desired spacing */
-  }
-  
-
-
-  @keyframes glowgold {
-    0% {
-      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* No shadow at the top */
-                  0 0 20px rgba(255, 215, 0, 0.4), /* Gold color shadow in the middle */
-                  0 0 30px rgba(255, 215, 0, 0.3); /* Gold color shadow at the bottom */
-    }
-    50% {
-      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* No shadow at the top */
-                  0 0 0 rgba(0, 0, 0, 1),
-                  0 0 0 rgba(0, 0, 0, 1);
-    }
-    100% {
-      box-shadow: 0 0 0 rgba(0, 0, 0, 1), /* No shadow at the top */
-                  0 0 20px rgba(255, 215, 0, 0.4), /* Gold color shadow in the middle */
-                  0 0 30px rgba(255, 215, 0, 0.3); /* Gold color shadow at the bottom */
-    }
-    
-    
-  }
-  
-
-
-  .body-2{
-    border-radius: 0 0 20px 20px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    animation: glowgold 3s infinite;
-  }
-
-.kallukaliya{
-  display: flex ;
-  justify-content: center;
-  align-content:center
 }
-  /* Mobile Devices */
-
-  
-  .iframewaladiv{
-    width: 740px;
-  }
 
 
-@media screen and (max-width:668px) {
 
-  .kallukaliya{
-    flex-direction: column;
-  }
-
-  #header-wrapper     {
-      height: 50px;
-      padding: 0;
-      margin: 0;
-     }
-  .col                {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-     }
-  .col-12             {
-      order: 3;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-     }
-  .col-3              {
-      order: 1;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-
-      
-     }
-     .col-3 .left{
-      order: 2;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-
-     }
-  .panel,.panel-body  {
-      height: fit-content;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-
-     }
-  .panel-label        {
-      height: 30px;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-
-     }
-     .panel-left{
-      height: fit-content;
-      order: 2;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-
-     }
-     .iframewaladiv .frame {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-  }
-
+/* Rest of your CSS */
+.swiper-button-next, .swiper-button-prev {
   
 
+  color: red !important;
+}
 
+.swiper-pagination-bullet{
+  width: 10px !important;
+  height: 10px !important;
+  background-color: red !important;
+  border: 2px solid black !important; /* Add the border property */
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .swiper-pagination-bullet {
+    background-color: red !important;
+    border: 2px solid black !important; /* Add the border property */
+  }
   
-
-     
-     
-   }
+  .swiper-pagination {
+    display: flex !important; /* Use flexbox */
+    justify-content: center !important; /* Center horizontally */
+    align-items: center !important; /* Center vertically */
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Adjust opacity as needed */
+    width: 70% !important;
+    margin-left: 60px;
+    padding: 5px 0 !important; /* Adjust padding as needed */
+    border-radius: 5px !important; /* Add border-radius for the black background */
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    border-radius: 50% !important;
+    margin: 0 5px !important; /* Add margin between bullets as needed */
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+  
+  
+}
