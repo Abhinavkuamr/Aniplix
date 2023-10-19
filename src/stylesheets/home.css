@@ -461,6 +461,9 @@ body{
     .anime .box{
         width: 148px
     }
+    .anime .content h3 {
+        margin-right:184px;
+    }
 
   .swiper-pagination-bullet {
     background-color: red !important;
