@@ -100,7 +100,7 @@ export default class HomeNew extends Component {
       
     >
 
-{anime.map((element, index) => (
+{anime.slice(0,5).map((element, index) => (
   
   <SwiperSlide key={index}>
     <div className='slide'>
@@ -139,7 +139,7 @@ export default class HomeNew extends Component {
         <div class="anime-slider">
         <div class="wrapper">
         <Swiper
-                  modules={[Navigation, Autoplay]}
+                  modules={[Navigation, Autoplay, Pagination]}
       spaceBetween={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={swiper => console.log(swiper)}
@@ -151,12 +151,14 @@ export default class HomeNew extends Component {
       breakpoints={{
         768: {
           slidesPerView: 2, // Number of slides to display for screens wider than 768px
+          spaceBetween: 5
         },
         1024: {
           slidesPerView: 5, // Number of slides to display for screens wider than 1024px
         },
         320: {
-          slidesPerView: 1
+          slidesPerView: 1,
+          spaceBetween: 5
         }
 
       }}
@@ -164,7 +166,7 @@ export default class HomeNew extends Component {
     >
 
       <>
-      {recent.map((element, index) => (
+      {recent.slice(0,10).map((element, index) => (
             <SwiperSlide>
 
 <div class="slide" key={index}  title={`Tooltip for ${element.title}`}>
