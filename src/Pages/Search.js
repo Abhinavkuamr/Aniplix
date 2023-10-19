@@ -12,7 +12,7 @@ const Search = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const URL = `https://betaapi-9jpy.onrender.com/api/search?id=${searchQuery}`
+        const URL = `https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/search?id=${searchQuery}`
         console.log(URL)
         axios.get(URL).then((response) => {
             console.log(response.data.results)
