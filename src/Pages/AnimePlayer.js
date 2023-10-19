@@ -70,10 +70,13 @@ export default class AnimePlayer extends Component {
 
 
                                 getepisodemedia = async (ANIMEDATA) => {
-                                 const EP = `https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/eplink?id=${ANIMEDATA.id}`
+                                 const EP = `https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/eplink?id=${ANIMEDATA.id}`;
+                                  console.log("EP",EP);
                                  try {
                                   const response = await axios.get(EP);
                                   const ep_link = response.data.sources[3]?.url || response.data.sources[1].url;
+                                                                     console.log("EP",ep_link);
+
                                   this.setState({ currentEpisode: ep_link ,isLoading: false});
                               } catch (err) {
                                   console.error(err);
