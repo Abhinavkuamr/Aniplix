@@ -271,6 +271,9 @@ header {
     text-align: center;
     padding: 40px 0;
   }
+  .card{
+    margin: 0
+  }
   
   .card-container {
     display: flex;
