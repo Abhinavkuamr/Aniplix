@@ -103,7 +103,7 @@ export default class AnimePlayer extends Component {
   <body class="container-fluid">
   <div id="header-wrapper">
   </div>
-<div style={{display:"flex", flexDirection:"row"}}>
+<div style={{display:"flex", flexDirection:"column"}}>
   <div class="row" >
   <div class="col col-12">
     <div className="kallukaliya">
