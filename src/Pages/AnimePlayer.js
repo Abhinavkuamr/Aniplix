@@ -144,7 +144,7 @@ export default class AnimePlayer extends Component {
             <iframe src="https://giphy.com/embed/dxmJyooma3sFGU8t7r" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>              <h3 className='iframeHeading'> You are watching {info.title}</h3>
               <iframe src="https://giphy.com/embed/VFGsPXfFeIcGdtwAIC" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </div>
-            <div className='toplay' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className='toplay' style={{ display: 'flex'}}>
 
             {isLoading ? (
                         // Display a loading screen
