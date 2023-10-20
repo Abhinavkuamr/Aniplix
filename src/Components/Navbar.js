@@ -73,8 +73,8 @@ const NavBar = () => {
       <NavLink to="/" className='logo'><i className='fas fa-infinity'></i>Anime.</NavLink>
       <nav className='navbar'>
         <NavLink to="/homenew" href='#'>home</NavLink>
-        <NavLink href='#' to="/top-airing">Top Airing</NavLink>
-        <a href='#'>Most Popular</a>
+        <NavLink to="/top-airing">Top Airing</NavLink>
+        <NavLink to="/popular">Most Popular</NavLink>
         <a href='#'>Movies</a>
       </nav>
       <div className="icons">
