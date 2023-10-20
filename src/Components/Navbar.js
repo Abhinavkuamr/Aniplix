@@ -70,7 +70,7 @@ const NavBar = () => {
       </form>
   </nav>*/}
     <header>
-      <NavLink to="/" className='logo'><i className='fas fa-infinity'></i>Anime.</NavLink>
+      <NavLink to="/" className='logo'><i className='fas fa-infinity'></i>Aniplix.</NavLink>
       <nav className='navbar'>
         <NavLink to="/homenew" href='#'>home</NavLink>
         <NavLink to="/top-airing">Top Airing</NavLink>
