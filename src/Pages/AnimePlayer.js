@@ -154,8 +154,7 @@ export default class AnimePlayer extends Component {
     {
       <>
   <body class="container-fluid">
-  <div id="header-wrapper">
-  </div>
+  
 <div style={{display:"flex", flexDirection:"column", justifyContent: 'center', alignItems: 'center' }}>
   <div class="row" >
   <div class="col col-12" >
