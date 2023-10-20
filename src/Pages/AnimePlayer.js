@@ -127,9 +127,9 @@ export default class AnimePlayer extends Component {
         <h3><span>Episodes</span> : {info.episodes.length}</h3>
         </div>
         </div>
-        <div className='description'>
           <h3><span>Genres</span>: {info.genres.join(', ')}</h3>
         <h3><span>Type</span> : {info.type}</h3>
+        <div className='description'>
         <h3><span>Other Name</span>: {info.otherName}</h3>
         <div className='animedes'>
         <div className='scrollable-description'>
