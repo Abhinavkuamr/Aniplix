@@ -74,7 +74,8 @@ export default class AnimePlayer extends Component {
                                   console.log("EP",EP);
                                  try {
                                   const response = await axios.get(EP);
-                                  const ep_link = response.data.sources[3]?.url || response.data.sources[4].url;
+                                  const ep_link =response.data.sources[3]?.url || response.data.sources[4]?.url ||  response.data.sources[2]?.url ||  response.data.sources[1]?.url ||  response.data.sources[0]?.url;
+
                                                                      console.log("EP",ep_link);
 
                                   this.setState({ currentEpisode: ep_link ,isLoading: false});
