@@ -30,6 +30,7 @@ const Home = () => {
     <>
       <div style={contentContainerStyle}>
         <section
+data-aos="fade-down" data-aos-once="true"
           className='anime kela'
           id='anime'
           style={{
