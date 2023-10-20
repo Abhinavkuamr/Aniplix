@@ -8,12 +8,14 @@ import Search from './Pages/Search';
 import HomeNew from './Pages/HomeNew'
 import Popular from './Pages/Popular';
 import Movies from './Pages/Movies'
+import { Analytics } from '@vercel/analytics/react';
 
 
 
 function App() {
   return (
   <>
+          <Analytics />
   <NavBar/>
   <Routes>
 
