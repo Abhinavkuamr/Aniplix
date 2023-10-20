@@ -7,6 +7,8 @@ import AnimePlayer from './Pages/AnimePlayer';
 import Search from './Pages/Search';
 import HomeNew from './Pages/HomeNew'
 import Popular from './Pages/Popular';
+import Movies from './Pages/Movies'
+
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
     <Route path="/search" element={<Search />}/>
     <Route path="/homenew" element={<HomeNew />}/>
       <Route path="/popular" element={<Popular />}/>
+        <Route path="/movies" element={<Movies />}/>
+
 
 
   </Routes>
