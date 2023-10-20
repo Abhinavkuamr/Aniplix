@@ -75,7 +75,7 @@ const NavBar = () => {
         <NavLink to="/homenew" href='#'>home</NavLink>
         <NavLink to="/top-airing">Top Airing</NavLink>
         <NavLink to="/popular">Most Popular</NavLink>
-        <a href='#'>Movies</a>
+        <NavLink to="/movies">Movies</NavLink>
       </nav>
       <div className="icons">
         <form onSubmit={handleSubmit}>
