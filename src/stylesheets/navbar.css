@@ -107,6 +107,7 @@ header .icons #menu-bars{
     top: 100%; /* Position it below the navbar */
     left: 0;
     right: 0;
+    width:100%;
     text-align: center;
     background: black;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
