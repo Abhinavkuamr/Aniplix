@@ -383,3 +383,27 @@
     color: #E50914;
   }
 
+/* In an external CSS file or within a <style> tag */
+.button-container {
+  display: flex; /* Make the text and button appear in a row */
+  align-items: center; /* Center vertically within the container */
+}
+
+.beautiful-button {
+  background-color: rgb(138, 75, 75); /* Red background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 9px; /* Equal padding for square shape */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 10px; /* No border radius for a square shape */
+  font-size: 12px; /* Smaller font size for a cute button */
+}
+
+/* Hover effect */
+.beautiful-button:hover {
+  background-color: var(--red); /* Slightly darker red on hover */
+  .beautiful-button i{
+    color: white;
+  }
+}
+
