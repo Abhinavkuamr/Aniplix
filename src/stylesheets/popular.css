@@ -1,0 +1,80 @@
+
+:root{
+    --red: #E50914;
+    --black: #000000;
+    --light-color: #181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  }
+
+
+.popular-anime{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.popular h1{
+
+    color: var(--red);
+    font-size: 20px;
+
+}
+
+.popular-heading{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.changePage{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* popular.css */
+
+/* Styles for the Previous button */
+.previous {
+    background-color: #0077B6; /* Background color */
+    color: white; /* Text color */
+    padding: 8px 16px; /* Padding around the text */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Show hand cursor on hover */
+    font-size: 16px; /* Text size */
+    border-radius: 4px; /* Rounded corners */
+    margin-right: 10px; /* Add spacing between buttons */
+  }
+  
+  /* Styles for the Next button */
+  .next {
+    background-color: #FF6B6B; /* Background color */
+    color: white; /* Text color */
+    padding: 8px 16px; /* Padding around the text */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Show hand cursor on hover */
+    font-size: 16px; /* Text size */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Add a disabled style for the Previous button when it's disabled */
+  .previous[disabled] {
+    background-color: #ccc; /* Grey out the button */
+    cursor: not-allowed; /* Show "not allowed" cursor */
+  }
+
+  .upside{
+  }
+  
+  @media (max-width: 768px) {
+
+
+
+    .popular-anime{
+        gap: 10px;
+        
+    }
+    
+  }
