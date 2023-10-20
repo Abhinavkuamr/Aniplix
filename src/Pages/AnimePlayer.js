@@ -26,6 +26,8 @@ export default class AnimePlayer extends Component {
         clickedEpisodeIndex: -1,
         isLoading: false,
         pageloading: true,
+        changeSubDub: '',
+        showButton: false
 
     }
 
@@ -44,12 +46,41 @@ export default class AnimePlayer extends Component {
     this.setState({ clickedEpisodeIndex: index,isLoading: true  });
     this.getepisodemedia(ANIMEDATA)
   }
+
+  convertDubSub = (anime_id) => {
+
+    const all_parts = anime_id.split('-')
+    const last_part = anime_id.split('-').splice(-1)[0]; 
+    const subVersion = "-";
+
+    if(anime_id == "jujutsu-kaisen-tv-2nd-season")
+    {
+      return "jujutsu-kaisen-2nd-season-dub"
+    }
+    
+    if(anime_id == "jujutsu-kaisen-2nd-season-dub")
+    {
+      return "jujutsu-kaisen-tv-2nd-season"
+    }
+  
+    if (last_part === 'dub') {
+      all_parts.pop();
+      
+      return all_parts.join(subVersion);
+    } else {
+      const dubVersion = anime_id + "-dub"
+      return anime_id + "-dub";
+    }
+  }
     
 
 
     async componentDidMount() {
       const lastPathSegment = window.location.pathname.split('/').filter(segment => segment)[1];
       const URL_ANIME_INFO = `https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/info?id=${lastPathSegment}`;
+      const change = this.convertDubSub(lastPathSegment)
+      const SWITCH_URL = `https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/info?id=${change}`;
+
   
       try {
           const response = await axios.get(URL_ANIME_INFO);
@@ -58,13 +89,34 @@ export default class AnimePlayer extends Component {
           const episodes = anime_info.episodes;
           const new_obj = [];
 
-          this.setState({ episodes, totalEpisode, info: anime_info, eps: new_obj, pageloading: false});
+          this.setState({ episodes, totalEpisode, info: anime_info, eps: new_obj, pageloading: false,changeSubDub:change});
           if (episodes.length > 0) {
             this.handleEpisodeButtonClick(0, episodes[0]);
           }
       } catch (err) {
           console.error(err);
       }
+
+      try{
+
+        const get_res = await axios.get(SWITCH_URL)
+        this.setState({showButton: true})
+
+
+      }
+      catch(err){
+
+        this.setState({showButton: false})
+
+
+      }
+  }
+
+
+  changeversion = (switch_value) => {
+
+    window.location.href = `/watch/${switch_value}`;
+
   }
   
 
@@ -89,7 +141,7 @@ export default class AnimePlayer extends Component {
   render() {
 
 
-    const { episodes, totalEpisode, currentEpisode , info,eps,currentPage, episodesPerPage,clickedEpisodeIndex,isLoading,pageloading} = this.state;
+    const { episodes, totalEpisode, currentEpisode , info,eps,currentPage, episodesPerPage,clickedEpisodeIndex,isLoading,pageloading, changeSubDub,showButton} = this.state;
     const indexOfLastEpisode = currentPage * episodesPerPage;
         const indexOfFirstEpisode = indexOfLastEpisode - episodesPerPage;
         const currentEpisodes = episodes.slice(indexOfFirstEpisode, indexOfLastEpisode);
@@ -106,10 +158,10 @@ export default class AnimePlayer extends Component {
   </div>
 <div style={{display:"flex", flexDirection:"column", justifyContent: 'center', alignItems: 'center' }}>
   <div class="row" >
-  <div class="col col-12">
+  <div class="col col-12" >
     <div className="kallukaliya">
       
-    <div class="col col-3 right"  >
+    <div class="col col-3 right"  data-aos="fade-right">
       <div class="panel panel-right">
         <div class="panel-label">
         <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -122,14 +174,23 @@ export default class AnimePlayer extends Component {
         <img src={info.image} className="info-image"></img>
         <div className='info'>
         <h3><span>Title</span> : {info.title}</h3>
-        <h3><span>Sub/Dub</span> : {info.subOrDub}</h3>
-        <h3><span>Release Date</span>: {info.releaseDate}</h3>
+        <div className="button-container">
+  <h3><span>Sub/Dub</span> : {info.subOrDub}</h3>
+  {showButton && (
+    <button className="beautiful-button" data-aos="fade-in" onClick={() => this.changeversion(changeSubDub)}>
+      <i class="fa-solid fa-rotate fa-spin"></i>
+    </button>
+  )}
+</div>        <h3><span>Release Date</span>: {info.releaseDate}</h3>
         <h3><span>Status</span>: {info.status}</h3>
         <h3><span>Episodes</span> : {info.episodes.length}</h3>
+        
         </div>
         </div>
-          <h3><span>Genres</span>: {info.genres.join(', ')}</h3>
+        <h3><span>Genres</span>: {info.genres.join(', ')}</h3>
         <h3><span>Type</span> : {info.type}</h3>
+
+
         <div className='description'>
         <h3><span>Other Name</span>: {info.otherName}</h3>
         <div className='animedes'>
@@ -141,7 +202,7 @@ export default class AnimePlayer extends Component {
       </div>
     </div>
     
-          <div class="panel-body body-1 iframewaladiv">
+          <div class="panel-body body-1 iframewaladiv" data-aos="fade-down">
             <div class="panel-label">
             <iframe src="https://giphy.com/embed/dxmJyooma3sFGU8t7r" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>              <h3 className='iframeHeading'> You are watching {info.title}</h3>
               <iframe src="https://giphy.com/embed/VFGsPXfFeIcGdtwAIC" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -171,7 +232,7 @@ export default class AnimePlayer extends Component {
 
           </div>
           <div class="col col-3 left">
-      <div class="panel panel-left">
+      <div class="panel panel-left" data-aos="fade-left">
         <div class="panel-label">
         <iframe src="https://giphy.com/embed/cRKRsUJ9enVZe" width="55" height="55" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
               <div className="pagination">
