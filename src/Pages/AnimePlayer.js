@@ -128,6 +128,7 @@ export default class AnimePlayer extends Component {
         </div>
         </div>
         <div className='description'>
+          <h3><span>Genres</span>: {info.genres.join(', ')}</h3>
         <h3><span>Type</span> : {info.type}</h3>
         <h3><span>Other Name</span>: {info.otherName}</h3>
         <div className='animedes'>
