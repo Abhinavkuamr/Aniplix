@@ -6,6 +6,8 @@ import NavBar  from './Components/Navbar';
 import AnimePlayer from './Pages/AnimePlayer';
 import Search from './Pages/Search';
 import HomeNew from './Pages/HomeNew'
+import Popular from './Pages/Popular';
+
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
     <Route path="/watch/:animeTitle" element={<AnimePlayer />}/>
     <Route path="/search" element={<Search />}/>
     <Route path="/homenew" element={<HomeNew />}/>
+      <Route path="/popular" element={<Popular />}/>
+
 
   </Routes>
   
