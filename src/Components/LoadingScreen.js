@@ -5,7 +5,7 @@ const LoadingScreen = () => {
   return (
     <div className="loading-screen">
       <div className="loader"></div>
-      <div className="loading-text">Loading...</div>
+      <div className="loading-text" style={{color: "white"}}>Loading...</div>
     </div>
   );
 };
