@@ -59,7 +59,7 @@ export default function Popular() {
         <button className="next" onClick={() => handlePageChange(currentPage + 1)}><i class="fa-solid fa-circle-right fa-beat-fade"></i></button>
       </div>
         
-        <div className='popular-anime'>
+        <div className='popular-anime' data-aos="fade-up">
             {popular.map((element,index) => (
                 <div className="card">
         
