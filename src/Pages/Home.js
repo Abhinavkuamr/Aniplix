@@ -56,7 +56,7 @@ data-aos="fade-down" data-aos-once="true"
             </button>
           </form>
         </section>
-        <NavLink to="/homenew" className='fullsite'>
+        <NavLink to="/homenew" className='fullsite' data-aos="fade-in" data-aos-once="true">
           <h1 className='somthing'>
             Full Site <i className='fa-solid fa-angles-right fa-bounce'></i>
           </h1>
