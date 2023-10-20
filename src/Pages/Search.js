@@ -29,12 +29,12 @@ const Search = () => {
   
   
     return (
-      <div style={{marginTop: "10rem"}}>
+      <div style={{marginTop: "10rem"}} >
         <h2 style={{color: "white"}}>Search Results for: "{searchQuery}"</h2>
         {loading ? (
         <LoadingScreen></LoadingScreen>
       ) : (
-        <div className="card-container">
+        <div className="card-container"  data-aos="fade-up">
           {animeData.map((animeItem, index) => (
             <AnimeCard key={index} animeItem={animeItem} />
           ))}
