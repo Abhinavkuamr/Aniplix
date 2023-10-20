@@ -86,7 +86,7 @@ export default class HomeNew extends Component {
       <>
       
       <section className='home' id='home'>
-        <div className='home-slider' data-aos="fade-down">
+        <div className='home-slider' data-aos="fade-down" data-aos-once="true">
           <div className='wrapper'>            
             <Swiper
                   modules={[Navigation,Autoplay,Pagination ]}
@@ -136,7 +136,7 @@ export default class HomeNew extends Component {
       <section className='anime' id='anime'>
         <h1 className='heading'>Recent Release</h1>
 
-        <div class="anime-slider" data-aos="fade-left">
+        <div class="anime-slider" data-aos="fade-left" data-aos-once="true">
         <div class="wrapper">
         <Swiper
                   modules={[Navigation, Autoplay, Pagination]}
@@ -199,7 +199,7 @@ export default class HomeNew extends Component {
         <div class="anime-list">
 
 
-            <div class="card-container" data-aos="fade-right">
+            <div class="card-container" data-aos="fade-right" data-aos-once="true">
 
             {anime.map((animeItem, index) => (
 
