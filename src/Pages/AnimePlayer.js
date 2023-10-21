@@ -153,7 +153,7 @@ export default class AnimePlayer extends Component {
     return (<>
     {
       <>
-  <body class="container-fluid">
+  <body class="container-fluid" style={{marginTop: "32px"}}>
   
 <div style={{display:"flex", flexDirection:"column", justifyContent: 'center', alignItems: 'center' }}>
   <div class="row" >
@@ -276,29 +276,7 @@ export default class AnimePlayer extends Component {
   <div class="col col-6" style={{display: "flex", justifyContent: "center", alignItems:"center"}}>
       <div class="row">
         
-        <div class="col col-12">
-          <div class="panel-body body-2">
-            <div class="panel-label">
-            {/*<iframe src="https://giphy.com/embed/TyJkjnj58K2jAIL26v" width="60" height="60" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>*/}
-              <h3>Rate this Episode</h3>
-              <iframe src="https://giphy.com/embed/NTcqWPci2hkm6OmXcD" width="70" height="70" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-            </div>
-            <div class="stars-container">
-    <ReactStars
-      count={5}
-      onChange={ratingChanged}
-      size={50}
-      activeColor="#ffd700"
-      emptyIcon={<i className="fa-solid fa-star"></i>}
-      halfIcon={<i className="fa-solid fa-star-half-alt"></i>}
-      fullIcon={<i className="fa-solid fa-star"></i>}
-    />
-  </div>
- 
   
- 
-          </div>
-        </div>
         </div>
       </div>
     </div>

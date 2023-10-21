@@ -105,9 +105,9 @@ header .icons #menu-bars{
   .searchTerm.active{
     position: absolute;
     top: 100%; /* Position it below the navbar */
-    left: 0;
+    left: 74%;
     right: 0;
-    width:100%;
+    width:20%;
     text-align: center;
     background: black;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
@@ -197,9 +197,7 @@ header .icons #menu-bars{
 @media(max-width: 768px)
 {
 
-    .searchTerm.active{
-        display: inline;
-    }
+ 
     
     header .icons #menu-bars{
         display: inline-block;
@@ -236,3 +234,67 @@ header .icons #menu-bars{
     }
 }
 
+.searchContainer.inactive{
+    display: none;
+}
+
+.header-container {
+    position: relative;
+  }
+  
+  .searchResults {
+  opacity: 0; /* Initially, hide the results */
+  transition: opacity 0.3s ease; /* Add a 0.3-second fade-in/fade-out transition */
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+  
+
+.searchContainer.active{
+    position: absolute;
+  top: 120px; /* Position it below the header */
+  left: 72%;
+  width: fit-content;
+  background-color: var(--light-color);
+  border: 1px solid var(--red);
+  padding: 10px;
+  display: none; /* Initially hide the search container */
+  z-index: 1; /* Place it above the header */
+  display: block; /* Show the search container when active */
+  }
+  .searchResults.active {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    max-height: fit-content;
+    overflow-y: auto;
+    opacity: 1;
+    
+    width: 350px;
+  }
+  
+  /* Style for individual search result items */
+  .searchResultItem {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Show the results when the input is focused */
+  .searchContainer:hover .searchResults {
+  }
+
+@media (max-width: 768px) {
+
+    .searchContainer.active{
+        width: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .searchTerm.active{
+        display: inline;
+        width: 100%;
+        left: 0;
+    }
+}

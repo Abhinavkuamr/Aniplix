@@ -1,6 +1,7 @@
 import React, { useEffect, useState  } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../stylesheets/home.css';
+import Footer from '../Components/Footer';
 
 const contentContainerStyle = {
   minHeight: 'calc(100vh - 100px)',
@@ -34,7 +35,7 @@ data-aos="fade-down" data-aos-once="true"
           className='anime kela'
           id='anime'
           style={{
-            marginTop: '50px',
+            marginTop: '0px',
             animation: 'glowUpDown 2s infinite',
           }}
         >
@@ -77,6 +78,7 @@ data-aos="fade-down" data-aos-once="true"
           If you have trouble accessing Aniplix, you can try anix or gogoanime, Aniplix is committed to providing a trustworthy and safe site for Aniplix streaming and offers excellent customer service. Give Aniplix a try and spread the word if you like it.
         </p>
       </div>
+      <Footer></Footer>
     </>
   );
 };
