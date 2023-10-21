@@ -5,7 +5,7 @@ Enjoy unlimited streaming anime with HD quality and 0% ads.
 
 ## Still Under Development
 
-##Technologies used
+#### Technologies used
 - Reactjs
 - Nodejs
 - Swiper
