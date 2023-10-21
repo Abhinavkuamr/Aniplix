@@ -57,13 +57,14 @@ const NavBar = () => {
     try{
       const res = await axios.get(`https://betaversion-git-main-abhinavkuamrs-projects.vercel.app/api/search?id=${searchTerm}`)
       //const searches = res.data.results.splice(0,3)
-      console.log(res.data.results.splice(0,3))
-      if(res.data.results.length == 0){
+      console.log(res.data.results.length)
+      if(res.data.results.length === 0){
         setSearchFound(false)
 
       }
       else{
 
+        console.log("FOUND")
         setSearchResult(res.data.results.splice(0,3))
         setSearchFound(true)
 
