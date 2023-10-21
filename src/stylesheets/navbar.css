@@ -242,12 +242,7 @@ header .icons #menu-bars{
     position: relative;
   }
   
-  .searchResults {
-  opacity: 0; /* Initially, hide the results */
-  transition: opacity 0.3s ease; /* Add a 0.3-second fade-in/fade-out transition */
-  pointer-events: none; /* Disable pointer events when hidden */
-}
-  
+
 
 .searchContainer.active{
     position: absolute;
@@ -266,9 +261,7 @@ header .icons #menu-bars{
     flex-direction: column;
     border-radius: 4px;
     max-height: fit-content;
-    overflow-y: auto;
-    opacity: 1;
-    
+    overflow-y: auto;    
     width: 350px;
   }
   

@@ -153,6 +153,7 @@ const NavBar = () => {
             <div
             className={`searchResultItem${searchFound? ' active': ''}`}
             key={element.id}
+            
             >
               
                 <div className='searchquerycards' style=
