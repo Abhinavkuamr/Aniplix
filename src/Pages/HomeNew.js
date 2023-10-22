@@ -97,7 +97,7 @@ export default class HomeNew extends Component {
   autoplay
   pagination={{ clickable: true }}
 >
-  {anime.map((element, index) =>
+  {anime.slice(0,5).map((element, index) =>
     element.animeCover && element.animeCover.length > 0 ? (
       <SwiperSlide key={index}>
         <div className='slide'>
