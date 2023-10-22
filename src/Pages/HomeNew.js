@@ -76,7 +76,7 @@ export default class HomeNew extends Component {
   render() {
 
     const {anime,showFullDescription,recent,isLoading} = this.state
-    //console.log("here",recent)
+    console.log("here",anime)
 
     if (isLoading) {
       
@@ -88,47 +88,44 @@ export default class HomeNew extends Component {
       <section className='home' id='home'>
         <div className='home-slider' data-aos="fade-down" data-aos-once="true">
           <div className='wrapper'>            
-            <Swiper
-                  modules={[Navigation,Autoplay,Pagination ]}
-                  spaceBetween={10}
-                  slidesPerView={1}
-                  loop={true}
-                  navigation
-                  autoplay
-                  pagination={{ clickable: true }}
-
-      
-    >
-
-{anime.slice(0,5).map((element, index) => (
-  
-  <SwiperSlide key={index}>
-    <div className='slide'>
-      <div className='box' style={{background: `url(${element.animeCover}) no-repeat` , backgroundSize: "contain" }}>
-        <div className='content'>
-        <div className="black-blur-box">
-          <u><h2 style={{fontStyle: "italic", color: "red"}}>Spotlight #{index + 1}</h2></u>
-          <h3>{element.animeName}</h3>
-          <p className='description'>
-  {showFullDescription ? element.animeDes : element.animeDes.slice(0, 200)}
-  {element.animeDes.length > 200 && (
-    <span onClick={this.toggleDescription} className='read-more'>
-      {showFullDescription ? "Read Less" : "Read More"}
-    </span>
-  )}
-</p>
-          <Link to={element.animeId} className='btn'>
-            Watch Now
-          </Link>
+          <Swiper
+  modules={[Navigation, Autoplay, Pagination]}
+  spaceBetween={10}
+  slidesPerView={1}
+  loop={true}
+  navigation
+  autoplay
+  pagination={{ clickable: true }}
+>
+  {anime.map((element, index) =>
+    element.animeCover && element.animeCover.length > 0 ? (
+      <SwiperSlide key={index}>
+        <div className='slide'>
+          <div className='box' style={{ background: `url(${element.animeCover}) no-repeat`, backgroundSize: "contain" }}>
+            <div className='content'>
+              <div className="black-blur-box">
+                <u><h2 style={{ fontStyle: "italic", color: "red" }}>Spotlight #{index + 1}</h2></u>
+                <h3>{element.animeName}</h3>
+                <p className='description'>
+                  {showFullDescription ? element.animeDes : element.animeDes.slice(0, 200)}
+                  {element.animeDes.length > 200 && (
+                    <span onClick={this.toggleDescription} className='read-more'>
+                      {showFullDescription ? "Read Less" : "Read More"}
+                    </span>
+                  )}
+                </p>
+                <Link to={element.animeId} className='btn'>
+                  Watch Now
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </SwiperSlide>
-))}
-      
-      
-    </Swiper>
+      </SwiperSlide>
+    ) : null
+  )}
+</Swiper>
+
           </div>
         </div>
       </section>
